@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relationship Quiz</title>
+  <style>
+    body {
+      background-color: #fef3f3;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #ff4d4d;
+      margin-bottom: 20px;
+    }
+    .question {
+      font-size: 1.5em;
+      margin: 20px 0;
+    }
+    .btn {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #ff2a2a;
+    }
+    .container {
+      margin-top: 40px;
+    }
+    .result {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #f44336;
+    }
+    .final-message {
+      font-size: 1.3em;
+      color: #ff4d4d;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Relationship Quiz for Babi</h1>
+
+  <div id="quiz-container">
+    <div class="question" id="question-1">
+      <p>1. Where did we first talk?</p>
+      <button class="btn" onclick="checkAnswer(1, 'Rp')">Role play on FB</button>
+      <button class="btn" onclick="checkAnswer(1, 'IG')">Instagram</button>
+      <button class="btn" onclick="checkAnswer(1, 'Discord')">Discord</button>
+      <button class="btn" onclick="checkAnswer(1, 'Tinder')">Tinder</button>
+    </div>
+
+    <div class="question" id="question-2">
+      <p>2. What was the first thing I said to you?</p>
+      <button class="btn" onclick="checkAnswer(2, 'malibog ka ba?')">Malibog ka ba?</button>
+      <button class="btn" onclick="checkAnswer(2, 'Hi there!')">Hi there!</button>
+      <button class="btn" onclick="checkAnswer(2, 'What’s up?')">What’s up?</button>
+      <button class="btn" onclick="checkAnswer(2, 'Hello, stranger!')">Hello, stranger!</button>
+    </div>
+
+    <div class="question" id="question-3">
+      <p>3. What song reminds me of you?</p>
+      <button class="btn" onclick="checkAnswer(3, 'About You')">About You by The 1975</button>
+      <button class="btn" onclick="checkAnswer(3, 'Perfect')">Perfect by Ed Sheeran</button>
+      <button class="btn" onclick="checkAnswer(3, 'Closer')">Closer by The Chainsmokers</button>
+      <button class="btn" onclick="checkAnswer(3, 'All of Me')">All of Me by John Legend</button>
+    </div>
+
+    <div class="question" id="question-4">
+      <p>4. What’s the name of our ML squad?</p>
+      <button class="btn" onclick="checkAnswer(4, 'THE 1975')">THE 1975</button>
+      <button class="btn" onclick="checkAnswer(4, 'The Dreamers')">The Dreamers</button>
+      <button class="btn" onclick="checkAnswer(4, 'Team Love')">Team Love</button>
+      <button class="btn" onclick="checkAnswer(4, 'Squad Goals')">Squad Goals</button>
+    </div>
+
+    <div class="question" id="question-5">
+      <p>5. What’s my favorite color?</p>
+      <button class="btn" onclick="checkAnswer(5, 'Red')">Red</button>
+      <button class="btn" onclick="checkAnswer(5, 'Pink')">Pink</button>
+      <button class="btn" onclick="checkAnswer(5, 'Blue')">Blue</button>
+      <button class="btn" onclick="checkAnswer(5, 'Purple')">Purple</button>
+    </div>
+
+    <div class="question" id="question-6">
+      <p>6. What’s my favorite memory of you?</p>
+      <button class="btn" onclick="checkAnswer(6, 'First time we talked')">First time we talked</button>
+      <button class="btn" onclick="checkAnswer(6, 'Our first date')">Our first date</button>
+      <button class="btn" onclick="checkAnswer(6, 'Our first kiss')">Our first kiss</button>
+      <button class="btn" onclick="checkAnswer(6, 'When you said you love me')">When you said you love me</button>
+    </div>
+
+    <div class="question" id="question-7">
+      <p>7. What’s our nickname for each other?</p>
+      <button class="btn" onclick="checkAnswer(7, 'Babi')">Babi</button>
+      <button class="btn" onclick="checkAnswer(7, 'Love')">Love</button>
+      <button class="btn" onclick="checkAnswer(7, 'Babe')">Babe</button>
+      <button class="btn" onclick="checkAnswer(7, 'Sweetheart')">Sweetheart</button>
+    </div>
+
+    <div class="question" id="question-8">
+      <p>8. What do I always do that makes you smile?</p>
+      <button class="btn" onclick="checkAnswer(8, 'You complement me')">You complement me</button>
+      <button class="btn" onclick="checkAnswer(8, 'You send me cute pictures')">You send me cute pictures</button>
+      <button class="btn" onclick="checkAnswer(8, 'You sing to me')">You sing to me</button>
+      <button class="btn" onclick="checkAnswer(8, 'You make me laugh')">You make me laugh</button>
+    </div>
+
+    <div class="question" id="question-9">
+      <p>9. When did we start talking?</p>
+      <button class="btn" onclick="checkAnswer(9, 'December 21')">December 21</button>
+      <button class="btn" onclick="checkAnswer(9, 'January 10')">January 10</button>
+      <button class="btn" onclick="checkAnswer(9, 'February 5')">February 5</button>
+      <button class="btn" onclick="checkAnswer(9, 'March 15')">March 15</button>
+    </div>
+
+    <div class="question" id="question-10">
+      <p>10. What promise did I make to you?</p>
+      <button class="btn" onclick="checkAnswer(10, 'I’ll make you my wife someday')">I’ll make you my wife someday</button>
+      <button class="btn" onclick="checkAnswer(10, 'I’ll love you forever')">I’ll love you forever</button>
+      <button class="btn" onclick="checkAnswer(10, 'I’ll always be there for you')">I’ll always be there for you</button>
+      <button class="btn" onclick="checkAnswer(10, 'I’ll take care of you')">I’ll take care of you</button>
+    </div>
+  </div>
+
+  <div id="result-container" class="result"></div>
+
+  <script>
+    let score = 0;
+
+    function checkAnswer(questionNumber, selectedAnswer) {
+      const correctAnswers = {
+        1: 'Rp',
+        2: 'malibog ka ba?',
+        3: 'About You',
+        4: 'THE 1975',
+        5: 'Red',
+        6: 'First time we talked',
+        7: 'Babi',
+        8: 'You complement me',
+        9: 'December 21',
+        10: 'I’ll make you my wife someday',
+      };
+
+      if (selectedAnswer === correctAnswers[questionNumber]) {
+        score++;
+      }
+
+      document.getElementById(`question-${questionNumber}`).style.display = 'none';
+
+      if (questionNumber === 10) {
+        displayFinalMessage();
+      }
+    }
+
+  function displayFinalMessage() {
+  let message = '';
+  if (score === 10) {
+    message = 'You got everything right, love. You truly know me, and I can\'t wait to make you my wife someday. I love you always and forever.';
+  } else {
+    message = 'You did amazing, my love. 💕\nEvery answer you gave reminds me of the bond we share and how much I cherish you, even though we\'re miles apart. I can\'t help but smile knowing that even through the distance, you still remember all the little details about us.\nFrom the first time we talked to the promises we\'ve made to each other, you truly hold my heart in every way.\nNo matter how far apart we are, you\'re always with me. Your love is the sweetest thing I’ve ever known, and I’m so lucky to have you in my life. I can’t wait to make you my wife someday.\nEvery moment with you means the world to me, and I’ll keep loving you more with every single day that passes.\nI’m always here, no matter where we are. ❤️';
+  }
+
+  document.getElementById('result-container').innerHTML = message;
+  }

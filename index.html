@@ -165,13 +165,25 @@
       }
     }
 
-  function displayFinalMessage() {
-  let message = '';
-  if (score === 10) {
-    message = 'You got everything right, love. You truly know me, and I can\'t wait to make you my wife someday. I love you always and forever.';
-  } else {
-    message = 'You did amazing, my love. 💕\nEvery answer you gave reminds me of the bond we share and how much I cherish you, even though we\'re miles apart. I can\'t help but smile knowing that even through the distance, you still remember all the little details about us.\nFrom the first time we talked to the promises we\'ve made to each other, you truly hold my heart in every way.\nNo matter how far apart we are, you\'re always with me. Your love is the sweetest thing I’ve ever known, and I’m so lucky to have you in my life. I can’t wait to make you my wife someday.\nEvery moment with you means the world to me, and I’ll keep loving you more with every single day that passes.\nI’m always here, no matter where we are. ❤️';
-  }
+    function displayFinalMessage() {
+      let message = '';
+      if (score === 10) {
+        message = `
+          <p>You got everything right, love. You truly know me, and I can’t wait to make you my wife someday. I love you always and forever.</p>
+        `;
+      } else {
+        message = `
+          <p>You did amazing, my love. 💕</p>
+          <p>Every answer you gave reminds me of the bond we share and how much I cherish you, even though we're miles apart. I can't help but smile knowing that even through the distance, you still remember all the little details about us.</p>
+          <p>From the first time we talked to the promises we've made to each other, you truly hold my heart in every way.</p>
+          <p>No matter how far apart we are, you’re always with me. Your love is the sweetest thing I’ve ever known, and I’m so lucky to have you in my life. I can’t wait to make you my wife someday.</p>
+          <p>Every moment with you means the world to me, and I’ll keep loving you more with every single day that passes.</p>
+          <p>I’m always here, no matter where we are. i loveee youuu sooo muchhhh babiii koooo. mwaaaaa mwaaaaaa😚❤️</p>
+        `;
+      }
 
-  document.getElementById('result-container').innerHTML = message;
-  }
+      document.getElementById('result-container').innerHTML = message;
+    }
+  </script>
+</body>
+</html>
